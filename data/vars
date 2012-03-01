@@ -1,0 +1,6 @@
+procedure main()
+begin
+	integer x;
+	integer y;
+	integer z;
+end;
