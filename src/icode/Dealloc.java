@@ -41,7 +41,7 @@ public class Dealloc extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 8
+    // Declared in icode.ast line 9
 
     public Dealloc() {
         super();
@@ -52,7 +52,7 @@ public class Dealloc extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 8
+    // Declared in icode.ast line 9
     public Dealloc(int p0) {
         setSize(p0);
     }
@@ -65,7 +65,7 @@ public class Dealloc extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 8
+    // Declared in icode.ast line 9
     protected int tokenint_Size;
 
     // Declared in icode.ast at line 3

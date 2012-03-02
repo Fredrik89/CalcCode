@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 
 public class Mul extends BinExpr implements Cloneable {

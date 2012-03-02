@@ -3,6 +3,7 @@ package icode;
 import util.*;import java.util.*;
 
 
+
 public abstract class Address extends Operand implements Cloneable {
     public void flushCache() {
         super.flushCache();
@@ -15,7 +16,7 @@ public abstract class Address extends Operand implements Cloneable {
         return node;
     }
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 12
+    // Declared in icode.ast line 15
 
     public Address() {
         super();

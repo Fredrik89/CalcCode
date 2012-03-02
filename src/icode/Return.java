@@ -40,7 +40,7 @@ public class Return extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 6
+    // Declared in icode.ast line 7
 
     public Return() {
         super();

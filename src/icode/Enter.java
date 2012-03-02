@@ -42,7 +42,7 @@ public class Enter extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 5
+    // Declared in icode.ast line 6
 
     public Enter() {
         super();
@@ -53,7 +53,7 @@ public class Enter extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 5
+    // Declared in icode.ast line 6
     public Enter(int p0, int p1) {
         setVars(p0);
         setTemps(p1);
@@ -67,7 +67,7 @@ public class Enter extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 5
+    // Declared in icode.ast line 6
     protected int tokenint_Vars;
 
     // Declared in icode.ast at line 3
@@ -83,7 +83,7 @@ public class Enter extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 5
+    // Declared in icode.ast line 6
     protected int tokenint_Temps;
 
     // Declared in icode.ast at line 3

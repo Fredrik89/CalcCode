@@ -40,7 +40,7 @@ public class Result extends Address implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 17
+    // Declared in icode.ast line 20
 
     public Result() {
         super();

@@ -42,7 +42,7 @@ public class Jmp extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 35
+    // Declared in icode.ast line 38
 
     public Jmp() {
         super();
@@ -53,7 +53,7 @@ public class Jmp extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 35
+    // Declared in icode.ast line 38
     public Jmp(String p0) {
         setLabel(p0);
     }
@@ -66,7 +66,7 @@ public class Jmp extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 35
+    // Declared in icode.ast line 38
     protected String tokenString_Label;
 
     // Declared in icode.ast at line 3

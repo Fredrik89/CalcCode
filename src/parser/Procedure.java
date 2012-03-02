@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 
 public class Procedure extends Stmt implements Cloneable {
@@ -33,16 +33,29 @@ public class Procedure extends Stmt implements Cloneable {
         }
         return res;
     }
-    // Declared in CodeGenerator.jadd at line 8
+    // Declared in CodeGenerator.jadd at line 9
 
-	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
+	public Object genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
 		ArrayList<Variable> vars = new ArrayList<Variable>();
+		
+		// Sizes of local variables
 		int tmps = 0;
-		vars = countVars(vars, blockLevel);
+		
+		
 		code.addInstruction(new LabelDecl(getId().getID()));
-		code.addInstruction(new Enter(vars.size(), tmps));
-		//generate moar code!!!11
+		
+		// Add Enter stmt and keep reference for backpatching sizes
+		Enter enterStmt;
+		enterStmt = new Enter(0, 0);
+		code.addInstruction(enterStmt);
+		
+		
+		for(Stmt t: getStmts()) {
+			Object res = t.genCode(code, tempFactory, blockLevel);
+		}
+			
 		code.addInstruction(new Return());
+		return null;
 	}
 
     // Declared in CountVars.jadd at line 2
@@ -56,6 +69,28 @@ public class Procedure extends Stmt implements Cloneable {
 			} 
 		}
 		return vars;
+	}
+
+    // Declared in NameAnalysis.jadd at line 5
+
+
+	public int numVars = 0;
+
+    // Declared in NameAnalysis.jadd at line 12
+
+	
+	public void nameAnalysis(SymbolTable<String, IdDecl> table) {
+		table.enterBlock();
+		for (Param p: getParams()) {
+			p.nameAnalysis(table);
+			numVars++;	
+		}
+		for (Stmt t: getStmts()) {
+			t.nameAnalysis(table);
+			if(t instanceof IdDecl)
+				numVars++;
+		}
+		table.exitBlock();
 	}
 
     // Declared in Parser.ast at line 3

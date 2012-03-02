@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 
 public class IdUse extends Expr implements Cloneable {
@@ -33,11 +33,28 @@ public class IdUse extends Expr implements Cloneable {
         }
         return res;
     }
-    // Declared in CodeGenerator.jadd at line 18
+    // Declared in CodeGenerator.jadd at line 40
 
 
-	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
+	public void genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
 		
+	}
+
+    // Declared in NameAnalysis.jadd at line 36
+
+	
+	private IdDecl declNode = null;
+
+    // Declared in NameAnalysis.jadd at line 37
+
+	public IdDecl decl() {
+		return declNode;
+	}
+
+    // Declared in NameAnalysis.jadd at line 40
+
+	void nameAnalysis(SymbolTable<String, IdDecl> table) {
+		declNode = table.lookup(getId().getID());
 	}
 
     // Declared in Parser.ast at line 3

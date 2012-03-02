@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 
 
@@ -16,6 +16,13 @@ public abstract class Stmt extends ASTNode<ASTNode> implements Cloneable {
         Stmt node = (Stmt)super.clone();
         return node;
     }
+    // Declared in CodeGenerator.jadd at line 32
+
+
+	public Object genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
+		return null;
+	}
+
     // Declared in Parser.ast at line 3
     // Declared in Parser.ast line 4
 

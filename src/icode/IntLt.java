@@ -38,7 +38,7 @@ public class IntLt extends BoolOpr implements Cloneable {
     String opString() {return "INTLT";}
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 30
+    // Declared in icode.ast line 33
 
     public IntLt() {
         super();
@@ -49,7 +49,7 @@ public class IntLt extends BoolOpr implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 30
+    // Declared in icode.ast line 33
     public IntLt(Operand p0, Operand p1, Address p2) {
         setChild(p0, 0);
         setChild(p1, 1);
@@ -64,7 +64,7 @@ public class IntLt extends BoolOpr implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setOperand1(Operand node) {
         setChild(node, 0);
     }
@@ -83,7 +83,7 @@ public class IntLt extends BoolOpr implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setOperand2(Operand node) {
         setChild(node, 1);
     }
@@ -102,7 +102,7 @@ public class IntLt extends BoolOpr implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setAddress(Address node) {
         setChild(node, 2);
     }

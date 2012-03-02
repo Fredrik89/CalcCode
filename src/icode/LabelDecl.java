@@ -41,7 +41,7 @@ public class LabelDecl extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 9
+    // Declared in icode.ast line 10
 
     public LabelDecl() {
         super();
@@ -52,7 +52,7 @@ public class LabelDecl extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 9
+    // Declared in icode.ast line 10
     public LabelDecl(String p0) {
         setLabel(p0);
     }
@@ -65,7 +65,7 @@ public class LabelDecl extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 9
+    // Declared in icode.ast line 10
     protected String tokenString_Label;
 
     // Declared in icode.ast at line 3

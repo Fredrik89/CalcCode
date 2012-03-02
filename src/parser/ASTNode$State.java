@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 public class ASTNode$State extends java.lang.Object {
     // Declared in ASTNode at line 2

@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 
 public class IdDecl extends Stmt implements Cloneable {
@@ -33,6 +33,20 @@ public class IdDecl extends Stmt implements Cloneable {
         }
         return res;
     }
+    // Declared in CodeGenerator.jadd at line 36
+
+	
+	public Object genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
+		return null;
+	}
+
+    // Declared in NameAnalysis.jadd at line 32
+
+	
+	void nameAnalysis(SymbolTable<String, IdDecl> table) {
+		table.add(getId().getID(), this);
+	}
+
     // Declared in Parser.ast at line 3
     // Declared in Parser.ast line 6
 

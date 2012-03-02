@@ -38,7 +38,7 @@ public class JmpT extends JmpCond implements Cloneable {
     String opString() {return "JMPT";}
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 38
+    // Declared in icode.ast line 41
 
     public JmpT() {
         super();
@@ -49,7 +49,7 @@ public class JmpT extends JmpCond implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 38
+    // Declared in icode.ast line 41
     public JmpT(Operand p0, String p1) {
         setChild(p0, 0);
         setLabel(p1);
@@ -63,7 +63,7 @@ public class JmpT extends JmpCond implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
     public void setOperand(Operand node) {
         setChild(node, 0);
     }
@@ -82,7 +82,7 @@ public class JmpT extends JmpCond implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
     public void setLabel(String value) {
         tokenString_Label = value;
     }

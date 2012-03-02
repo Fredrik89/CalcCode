@@ -41,7 +41,7 @@ public class Variable extends Address implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
 
     public Variable() {
         super();
@@ -52,7 +52,7 @@ public class Variable extends Address implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
     public Variable(int p0, int p1) {
         setLevels(p0);
         setNumber(p1);
@@ -66,7 +66,7 @@ public class Variable extends Address implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
     protected int tokenint_Levels;
 
     // Declared in icode.ast at line 3
@@ -82,7 +82,7 @@ public class Variable extends Address implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
     protected int tokenint_Number;
 
     // Declared in icode.ast at line 3

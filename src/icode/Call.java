@@ -42,7 +42,7 @@ public class Call extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 4
+    // Declared in icode.ast line 5
 
     public Call() {
         super();
@@ -53,7 +53,7 @@ public class Call extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 4
+    // Declared in icode.ast line 5
     public Call(String p0, int p1) {
         setLabel(p0);
         setLevels(p1);
@@ -67,7 +67,7 @@ public class Call extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 4
+    // Declared in icode.ast line 5
     protected String tokenString_Label;
 
     // Declared in icode.ast at line 3
@@ -83,7 +83,7 @@ public class Call extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 4
+    // Declared in icode.ast line 5
     protected int tokenint_Levels;
 
     // Declared in icode.ast at line 3

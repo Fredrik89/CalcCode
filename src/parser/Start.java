@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 public class Start extends ASTNode<ASTNode> implements Cloneable {
     public void flushCache() {
@@ -34,8 +34,17 @@ public class Start extends ASTNode<ASTNode> implements Cloneable {
     }
     // Declared in CodeGenerator.jadd at line 5
 
-	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
+	public Object genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
 		getProcedure().genCode(code, tempFactory, blockLevel);
+		return null;
+	}
+
+    // Declared in NameAnalysis.jadd at line 7
+
+	
+	public void nameAnalysis() {
+		SymbolTable<String, IdDecl> table = new SymbolTable<String, IdDecl>();
+		nameAnalysis(table);
 	}
 
     // Declared in Parser.ast at line 3

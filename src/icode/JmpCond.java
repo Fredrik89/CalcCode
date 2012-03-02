@@ -28,7 +28,7 @@ public abstract class JmpCond extends Jmp implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
 
     public JmpCond() {
         super();
@@ -39,7 +39,7 @@ public abstract class JmpCond extends Jmp implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
     public JmpCond(Operand p0, String p1) {
         setChild(p0, 0);
         setLabel(p1);
@@ -53,7 +53,7 @@ public abstract class JmpCond extends Jmp implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
     public void setOperand(Operand node) {
         setChild(node, 0);
     }
@@ -72,7 +72,7 @@ public abstract class JmpCond extends Jmp implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 36
+    // Declared in icode.ast line 39
     public void setLabel(String value) {
         tokenString_Label = value;
     }

@@ -1,4 +1,5 @@
 Code ::= Instruction*;
+
 abstract Instruction;
 Move: Instruction ::= Operand Address;
 Call: Instruction ::= <Label: String> <Levels: int>;
@@ -7,8 +8,10 @@ Return: Instruction;
 Alloc: Instruction ::= <Size: int>;
 Dealloc: Instruction ::= <Size: int>;
 LabelDecl: Instruction ::= <Label: String>;
+
 abstract Operand;
 IntConst: Operand ::= <Value: String>;
+
 abstract Address: Operand;
 Temp: Address ::= <Number: int>;
 Argument: Address ::= <Number: int>;

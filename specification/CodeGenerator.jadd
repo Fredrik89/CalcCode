@@ -2,19 +2,48 @@ import icode.*;
 import util.*;
 import java.util.ArrayList;
 aspect CodeGenerator {
-	public void Start.genCode(Code code, TempFactory tempFactory, int blockLevel){
+	public Start.genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
 		getProcedure().genCode(code, tempFactory, blockLevel);
+		return;
 	}
-	public void Procedure.genCode(Code code, TempFactory tempFactory, int blockLevel){
-		ArrayList<Variable> vars = new ArrayList<Variable>();
+	
+	public void Procedure.addVar(IdDecl, decl) {
+		vars.add(decl);
+				Variable var = new Variable(blockLevel, proc.)
+	}
+		
+	private	ArrayList<Variable> Procedure.vars = new ArrayList<Variable>();
+	private int Procedure.varOffset;
+	public Procedure.genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
+		
+		// Sizes of local variables
 		int tmps = 0;
-		vars = countVars(vars, blockLevel);
+		
+		
 		code.addInstruction(new LabelDecl(getId().getID()));
-		code.addInstruction(new Enter(vars.size(), tmps));
+		
+		// Add Enter stmt and keep reference for backpatching sizes
+		Enter enterStmt;
+		enterStmt = new Enter(0, 0);
+		code.addInstruction(enterStmt);
+		
+		for(Stmt t: getStmts()) {
+			Object res = t.genCode(code, tempFactory, blockLevel);
+		}
+			
 		code.addInstruction(new Return());
 	}
 
-	public void IdUse.genCode(Code code, TempFactory tempFactory, int blockLevel){
+	public Stmt.genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
+		return;
+	}
+	
+	public IdDecl.genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
+		Varaible var = proc.addVar(this);
+		code.addInstuction
+	}
+
+	public IdUse.genCode(Code code, TempFactory tempFactory, int blockLevel, Procedure proc) {
 		
 	}
 		

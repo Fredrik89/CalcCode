@@ -40,7 +40,7 @@ public class Parameter extends Variable implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 16
+    // Declared in icode.ast line 19
 
     public Parameter() {
         super();
@@ -51,7 +51,7 @@ public class Parameter extends Variable implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 16
+    // Declared in icode.ast line 19
     public Parameter(int p0, int p1) {
         setLevels(p0);
         setNumber(p1);
@@ -65,7 +65,7 @@ public class Parameter extends Variable implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
     public void setLevels(int value) {
         tokenint_Levels = value;
     }
@@ -77,7 +77,7 @@ public class Parameter extends Variable implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 15
+    // Declared in icode.ast line 18
     public void setNumber(int value) {
         tokenint_Number = value;
     }

@@ -40,7 +40,7 @@ public class Temp extends Address implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 13
+    // Declared in icode.ast line 16
 
     public Temp() {
         super();
@@ -51,7 +51,7 @@ public class Temp extends Address implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 13
+    // Declared in icode.ast line 16
     public Temp(int p0) {
         setNumber(p0);
     }
@@ -64,7 +64,7 @@ public class Temp extends Address implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 13
+    // Declared in icode.ast line 16
     protected int tokenint_Number;
 
     // Declared in icode.ast at line 3

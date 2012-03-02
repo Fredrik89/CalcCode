@@ -1,6 +1,6 @@
 
 package parser;
-import icode.*;import util.*;import java.util.ArrayList;
+import icode.*;import util.*;import java.util.ArrayList;import semanticlib.SymbolTable;
 
 // Generated with JastAdd II (http://jastadd.cs.lth.se) version R20090610
 
@@ -32,6 +32,15 @@ public class ASTNode<T extends ASTNode> extends SimpleNode  implements Cloneable
         }
         return res;
     }
+    // Declared in NameAnalysis.jadd at line 26
+
+	
+	void nameAnalysis(SymbolTable<String, IdDecl> table) {
+		for (int k=0; k<getNumChild(); k++) {
+			getChild(k).nameAnalysis(table);
+		}
+	}
+
     // Declared in SourceLine.jadd at line 3
 
 

@@ -3,6 +3,7 @@ package icode;
 import util.*;import java.util.*;
 
 
+
 public abstract class Instruction extends ASTNode<ASTNode> implements Cloneable {
     public void flushCache() {
         super.flushCache();
@@ -47,7 +48,7 @@ public abstract class Instruction extends ASTNode<ASTNode> implements Cloneable 
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 2
+    // Declared in icode.ast line 3
 
     public Instruction() {
         super();

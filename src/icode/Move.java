@@ -42,7 +42,7 @@ public class Move extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 3
+    // Declared in icode.ast line 4
 
     public Move() {
         super();
@@ -53,7 +53,7 @@ public class Move extends Instruction implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 3
+    // Declared in icode.ast line 4
     public Move(Operand p0, Address p1) {
         setChild(p0, 0);
         setChild(p1, 1);
@@ -67,7 +67,7 @@ public class Move extends Instruction implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 3
+    // Declared in icode.ast line 4
     public void setOperand(Operand node) {
         setChild(node, 0);
     }
@@ -86,7 +86,7 @@ public class Move extends Instruction implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 3
+    // Declared in icode.ast line 4
     public void setAddress(Address node) {
         setChild(node, 1);
     }

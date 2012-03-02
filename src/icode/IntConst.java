@@ -40,7 +40,7 @@ public class IntConst extends Operand implements Cloneable {
     }
 
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 11
+    // Declared in icode.ast line 13
 
     public IntConst() {
         super();
@@ -51,7 +51,7 @@ public class IntConst extends Operand implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 11
+    // Declared in icode.ast line 13
     public IntConst(String p0) {
         setValue(p0);
     }
@@ -64,7 +64,7 @@ public class IntConst extends Operand implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 11
+    // Declared in icode.ast line 13
     protected String tokenString_Value;
 
     // Declared in icode.ast at line 3

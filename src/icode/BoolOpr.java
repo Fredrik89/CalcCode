@@ -15,7 +15,7 @@ public abstract class BoolOpr extends BinOpr implements Cloneable {
         return node;
     }
     // Declared in icode.ast at line 3
-    // Declared in icode.ast line 27
+    // Declared in icode.ast line 30
 
     public BoolOpr() {
         super();
@@ -26,7 +26,7 @@ public abstract class BoolOpr extends BinOpr implements Cloneable {
     // Declared in icode.ast at line 10
 
 
-    // Declared in icode.ast line 27
+    // Declared in icode.ast line 30
     public BoolOpr(Operand p0, Operand p1, Address p2) {
         setChild(p0, 0);
         setChild(p1, 1);
@@ -41,7 +41,7 @@ public abstract class BoolOpr extends BinOpr implements Cloneable {
   }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setOperand1(Operand node) {
         setChild(node, 0);
     }
@@ -60,7 +60,7 @@ public abstract class BoolOpr extends BinOpr implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setOperand2(Operand node) {
         setChild(node, 1);
     }
@@ -79,7 +79,7 @@ public abstract class BoolOpr extends BinOpr implements Cloneable {
     }
 
     // Declared in icode.ast at line 2
-    // Declared in icode.ast line 20
+    // Declared in icode.ast line 23
     public void setAddress(Address node) {
         setChild(node, 2);
     }
