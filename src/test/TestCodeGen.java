@@ -8,7 +8,6 @@ import java.io.FileReader;
 import org.junit.Test;
 
 import parser.Parser;
-import util.TempFactory;
 
 public class TestCodeGen extends TestCaseOutput {
 	private final static String DATA = "data/";
@@ -30,9 +29,7 @@ public class TestCodeGen extends TestCaseOutput {
 		try {
 			Code code = new Code();
 			Parser parser = new Parser(new FileReader(arg));
-			TempFactory tempFactory = new TempFactory();
-			int blockLevel = 0;
-			parser.start().genCode(code, tempFactory, blockLevel);
+			parser.start().genCode(code);
 			System.out.println(code);
 		} catch (Exception e) {
 			e.printStackTrace();

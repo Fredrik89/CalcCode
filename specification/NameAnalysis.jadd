@@ -1,0 +1,34 @@
+import semanticlib.SymbolTable;
+
+aspect NameAnalysis {
+	
+	public void Start.nameAnalysis() {
+		SymbolTable<String, IdDecl> table = new SymbolTable<String, IdDecl>();
+		nameAnalysis(table);
+	}
+	
+	void ASTNode.nameAnalysis(SymbolTable<String, IdDecl> table) {
+		for (int k=0; k<getNumChild(); k++) {
+			getChild(k).nameAnalysis(table);
+		}
+	}
+	
+	void IdDecl.nameAnalysis(SymbolTable<String, IdDecl> table) {
+		super.nameAnalysis(table);
+		table.add(getId().getID(), this);
+	}
+	
+	private IdDecl IdUse.declNode = null;
+	public IdDecl IdUse.decl() {
+		return declNode;
+	}
+	void IdUse.nameAnalysis(SymbolTable<String, IdDecl> table) {
+		declNode = table.lookup(getId().getID());
+	}
+	
+	void Procedure.nameAnalysis(SymbolTable<String, IdDecl> table) {
+		table.enterBlock();
+		super.nameAnalysis(table);
+		table.exitBlock();
+	}
+}
