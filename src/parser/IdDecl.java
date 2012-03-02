@@ -33,6 +33,13 @@ public class IdDecl extends Stmt implements Cloneable {
         }
         return res;
     }
+    // Declared in CodeGenerator.jadd at line 25
+
+	
+	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
+		
+	}
+
     // Declared in Parser.ast at line 3
     // Declared in Parser.ast line 6
 

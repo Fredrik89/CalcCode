@@ -6,14 +6,26 @@ aspect CodeGenerator {
 		getProcedure().genCode(code, tempFactory, blockLevel);
 	}
 	public void Procedure.genCode(Code code, TempFactory tempFactory, int blockLevel){
-		ArrayList<Variable> vars = new ArrayList<Variable>();
 		int tmps = 0;
-		vars = countVars(vars, blockLevel);
+		int numOfVars = 0;
+		numOfVars = countVars(blockLevel);
 		code.addInstruction(new LabelDecl(getId().getID()));
-		code.addInstruction(new Enter(vars.size(), tmps));
+		code.addInstruction(new Enter(numOfVars, tmps));
 		code.addInstruction(new Return());
 	}
-
+	
+	Address IdUse.genAddress(int blockLevel) {
+		return getId().genVariable(blockLevel);
+	}
+	
+	public Variable Id.genVariable(int blockLevel){
+		return new Variable(getVarNum(), blockLevel - getBlockLevel());
+	}
+	
+	public void IdDecl.genCode(Code code, TempFactory tempFactory, int blockLevel){
+		
+	}
+	
 	public void IdUse.genCode(Code code, TempFactory tempFactory, int blockLevel){
 		
 	}

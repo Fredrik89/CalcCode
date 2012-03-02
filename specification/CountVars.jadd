@@ -1,12 +1,32 @@
 aspect CountVars {
-	public ArrayList<Variable> Procedure.countVars(ArrayList<Variable> vars, int blockLevel){
-		int variableIndex = 0;
+	public int Procedure.countVars(int blockLevel){
+		int numOfVars = 0;
 		for(Stmt stmt : getStmtList()){
 			if(stmt instanceof IdDecl){
-				vars.add(new Variable(blockLevel, variableIndex));
-				variableIndex++;
+				IdDecl tmpStmt = (IdDecl) stmt;
+				stmt = tmpStmt;
+				stmt.getId().setVarNum(numOfVars);
+				stmt.getId().setBlockLevel(blockLevel);
+				numOfVars++;
 			} 
 		}
-		return vars;
+		return numOfVars;
 	}
+	private int Id.varNum = 0;
+	private int Id.blockLevel = 0;
+	
+	public int Id.getVarNum(){
+		return varNum;
+	}
+	
+	public int Id.getBlockLevel() {
+		return blockLevel;
+	}
+	public void Id.setVarNum(int num){
+		varNum = num;
+	}
+	public void Id.setBlockLevel(int num) {
+		blockLevel = num;
+	}
+	
 }

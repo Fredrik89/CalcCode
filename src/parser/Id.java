@@ -33,6 +33,47 @@ public class Id extends ASTNode<ASTNode> implements Cloneable {
         }
         return res;
     }
+    // Declared in CodeGenerator.jadd at line 21
+
+	
+	public Variable genVariable(int blockLevel){
+		return new Variable(getVarNum(), blockLevel - getBlockLevel());
+	}
+
+    // Declared in CountVars.jadd at line 15
+
+	private int varNum = 0;
+
+    // Declared in CountVars.jadd at line 16
+
+	private int blockLevel = 0;
+
+    // Declared in CountVars.jadd at line 18
+
+	
+	public int getVarNum(){
+		return varNum;
+	}
+
+    // Declared in CountVars.jadd at line 22
+
+	
+	public int getBlockLevel() {
+		return blockLevel;
+	}
+
+    // Declared in CountVars.jadd at line 25
+
+	public void setVarNum(int num){
+		varNum = num;
+	}
+
+    // Declared in CountVars.jadd at line 28
+
+	public void setBlockLevel(int num) {
+		blockLevel = num;
+	}
+
     // Declared in Parser.ast at line 3
     // Declared in Parser.ast line 28
 

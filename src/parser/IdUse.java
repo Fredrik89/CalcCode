@@ -33,9 +33,16 @@ public class IdUse extends Expr implements Cloneable {
         }
         return res;
     }
-    // Declared in CodeGenerator.jadd at line 18
+    // Declared in CodeGenerator.jadd at line 17
 
+	
+	Address genAddress(int blockLevel) {
+		return getId().genVariable(blockLevel);
+	}
 
+    // Declared in CodeGenerator.jadd at line 29
+
+	
 	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
 		
 	}

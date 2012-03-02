@@ -36,26 +36,28 @@ public class Procedure extends Stmt implements Cloneable {
     // Declared in CodeGenerator.jadd at line 8
 
 	public void genCode(Code code, TempFactory tempFactory, int blockLevel){
-		ArrayList<Variable> vars = new ArrayList<Variable>();
 		int tmps = 0;
-		vars = countVars(vars, blockLevel);
+		int numOfVars = 0;
+		numOfVars = countVars(blockLevel);
 		code.addInstruction(new LabelDecl(getId().getID()));
-		code.addInstruction(new Enter(vars.size(), tmps));
-		//generate moar code!!!11
+		code.addInstruction(new Enter(numOfVars, tmps));
 		code.addInstruction(new Return());
 	}
 
     // Declared in CountVars.jadd at line 2
 
-	public ArrayList<Variable> countVars(ArrayList<Variable> vars, int blockLevel){
-		int variableIndex = 0;
+	public int countVars(int blockLevel){
+		int numOfVars = 0;
 		for(Stmt stmt : getStmtList()){
 			if(stmt instanceof IdDecl){
-				vars.add(new Variable(blockLevel, variableIndex));
-				variableIndex++;
+				IdDecl tmpStmt = (IdDecl) stmt;
+				stmt = tmpStmt;
+				stmt.getId().setVarNum(numOfVars);
+				stmt.getId().setBlockLevel(blockLevel);
+				numOfVars++;
 			} 
 		}
-		return vars;
+		return numOfVars;
 	}
 
     // Declared in Parser.ast at line 3
